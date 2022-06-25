@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8be3783eb43cb44187bc85a61489857, type: 3}
+  m_Name: DialogueObject
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - dialogueText: Hello
+    dialogueDisplayTime: 2
+    dialogueChoices: []
+    buttons: []
+  - dialogueText: My Problem
+    dialogueDisplayTime: 3
+    dialogueChoices:
+    - dialogueChoice: Choice 1
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: b05132ab8850e854dade64da79fe5c9b,
+        type: 2}
+      Button: {fileID: 0}
+    - dialogueChoice: Choice 2
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 99eff9af498e8a44ebcd2acf0e2826a5,
+        type: 2}
+      Button: {fileID: 0}
+    - dialogueChoice: Choice 3
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: a17e646bdade4ff4fa078ca912c8dbf9,
+        type: 2}
+      Button: {fileID: 0}
+    buttons: []
+  - dialogueText: Dialogue End
+    dialogueDisplayTime: 3
+    dialogueChoices: []
+    buttons: []
+  endDialogue: {fileID: 0}
