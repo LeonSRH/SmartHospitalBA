@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DD181F4F-80E3-3EC8-0917-5823BC0A76DB}</ProjectGuid>
+    <ProjectGuid>{B67C3B64-5E81-A443-04D4-2F66547C470A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1162,35 +1162,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{A6EDC725-ACF6-231D-424F-49AB2DC4A4F6}</Project>
+      <Project>{532DC748-5500-ECD2-A802-3FE779252E1A}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{82339291-A3F4-CBD6-D0CC-8AB8AF8ECB55}</Project>
+      <Project>{2B352222-FE88-2C78-F35A-8794D4CC7960}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{887F3E5D-C9C8-F50C-230C-0820E2ED373F}</Project>
+      <Project>{6FEC6224-0D96-FE13-F4F0-C706EEB7EE8A}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{073900FA-66EF-9F20-9A79-0C54F5687AF5}</Project>
+      <Project>{79AD8F9A-F35D-80B5-425F-A48763812411}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{3747734C-E5D8-3EDC-F3F0-30F044589EB9}</Project>
+      <Project>{249723FC-0090-6CBB-40E1-7F25D449539A}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{70D595BD-315D-D7D5-C979-EBFA22160DB8}</Project>
+      <Project>{6C3DDA82-5DEC-1926-A0E5-7D5B3293A94E}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
     <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{A3544917-3F65-CBA0-0DF4-B89D77F94AAC}</Project>
+      <Project>{E5559869-6DD6-1697-E3B6-C2AB71B11059}</Project>
       <Name>NavMeshComponents</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{06D8EC61-8559-3CED-CCE0-68624BF6F719}</Project>
+      <Project>{A0FD8E2E-7C2C-6512-2344-A2227A730500}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
   </ItemGroup>

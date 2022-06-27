@@ -1,2 +1,6 @@
 Library/ArtifactDB
 Library/PackageCache
+Library/Artifacts
+Library/ShaderCache
+Temp
+Logs
