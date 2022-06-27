@@ -4,5 +4,7 @@ Library/Artifacts
 Library/ShaderCache
 Library/SourceAssetDB
 Library/ShaderCache.db
+Library/SceneVisibilityState.asset
+Library/StateCache
 Temp
 Logs
