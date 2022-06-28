@@ -28,6 +28,8 @@ namespace SH.DialogueSystem
 
         [SerializeField] GameObject dialogueOptionsButtonPrefab, dialogueOptionsContainer;
 
+        [SerializeField] bool isEventActive = false;
+
         [HideInInspector] public GameObject buttonReference; 
 
         bool optionSelected = false;
@@ -48,6 +50,14 @@ namespace SH.DialogueSystem
             //Left commented for now cause of specific dialogue object tests, add later back
             //dialogueObject = GetRandomItem(dialogueObjects);
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartDialogue();
+            }
+        }
         //bool for Behavior Tree, so that if the dialogue ends, the patient leaves
         public void StartDialogue()
         {
@@ -61,7 +71,14 @@ namespace SH.DialogueSystem
         {
             optionSelected = true;
             dialogueObject = selectedOption;
-            StartDialogue();
+            //isEventActive = true;
+            //So far it works, needs more testings
+            if (!isEventActive)
+            {
+                StartDialogue();
+            }
+            
+            //Probalby seperate method that gets called (Savestuff)s
             userDataDecision.userData.Add(stopWatch.currentTime);
             foreach(var dialogue in selectedOption.dialogueSegments)
             {
@@ -93,16 +110,16 @@ namespace SH.DialogueSystem
                     yield return new WaitForSeconds(dialogue.dialogueDisplayTime);
                 }else
                 {
-                    cocoStopwatch.SetActive(true);
-                    stopWatch.StartStopWatch();
-                    dialogueOptionsContainer.SetActive(true);   
-                    foreach(var option in dialogue.dialogueChoices)
-                    {
-                        buttonReference = Instantiate(option.Button, dialogueOptionsParent);
-                        buttonReference.GetComponent<DialogueOption>().Setup(this, option.followOnDialogue, option.dialogueChoice);
-                        spawnsButtons.Add(buttonReference);
-                        //newButton.name = ("NewButton" + buttonNummer);
-                    }
+                        cocoStopwatch.SetActive(true);
+                        stopWatch.StartStopWatch();
+                        dialogueOptionsContainer.SetActive(true);   
+                        foreach(var option in dialogue.dialogueChoices)
+                        {
+                            buttonReference = Instantiate(option.Button, dialogueOptionsParent);
+                            buttonReference.GetComponent<DialogueOption>().Setup(this, option.followOnDialogue, option.dialogueChoice);
+                            spawnsButtons.Add(buttonReference);
+                            //newButton.name = ("NewButton" + buttonNummer);
+                        }
                     while(!optionSelected)
                     {
                         yield return null;

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8be3783eb43cb44187bc85a61489857, type: 3}
+  m_Name: Laborparameter
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - dialogueText: "Welche Laborparameter m\xF6chten Sie bei derzeitigem Kenntnissstand
+      erheben?"
+    dialogueDisplayTime: 2
+    dialogueChoices:
+    - dialogueChoice: Laborparemterfenster anzeigen
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
+      Button: {fileID: 0}
+    buttons: []
+  endDialogue: {fileID: 0}
