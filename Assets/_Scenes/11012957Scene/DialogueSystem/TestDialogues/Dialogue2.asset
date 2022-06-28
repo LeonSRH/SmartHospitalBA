@@ -19,18 +19,6 @@ MonoBehaviour:
     buttons: []
   - dialogueText: Ich habe schmerzen.
     dialogueDisplayTime: 2
-    dialogueChoices:
-    - dialogueChoice: Bitte legen Sie sich auf das Bett.
-      dialogueReaction: 0
-      followOnDialogue: {fileID: 11400000, guid: 23415bc910fc84445a86ec952654b38f,
-        type: 2}
-      Button: {fileID: 9181237316533860645, guid: e5b92b1519ed0bd43b87709647f3e192,
-        type: 3}
-    - dialogueChoice: "Keine Sorge, Sie m\xFCssen sich nur ausruhen."
-      dialogueReaction: 1
-      followOnDialogue: {fileID: 11400000, guid: 39a003af4ab31884bbc5b690b6332dc5,
-        type: 2}
-      Button: {fileID: 9181237316533860645, guid: d39274eb7e7030e44b0f7b99a1e63c92,
-        type: 3}
+    dialogueChoices: []
     buttons: []
-  endDialogue: {fileID: 0}
+  endDialogue: {fileID: 11400000, guid: cac938772c757bc4bac629c737a081b4, type: 2}

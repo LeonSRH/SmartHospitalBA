@@ -640,6 +640,7 @@
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Renderer\SetMaterial.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\BoxCollider\GetSize.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Transform\LookAt.cs" />
+    <Compile Include="Assets\_Scenes\11012957Scene\Scripts\AnswerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

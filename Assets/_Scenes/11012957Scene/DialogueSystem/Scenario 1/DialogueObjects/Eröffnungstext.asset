@@ -16,7 +16,7 @@ MonoBehaviour:
   - dialogueText: Ich habe seit einer Woche Schmerzen in der Brust. Mein Hausarzt
       hat mir vor 4 Tagen Ibuprofen verschrieben. Es wurde kurzzeitig besser, seit
       heute morgen aber wieder deutlich schlechter.
-    dialogueDisplayTime: 3
+    dialogueDisplayTime: 4
     dialogueChoices: []
     buttons: []
   - dialogueText: "M\xF6chten Sie Sofortma\xDFnahmen durchf\xFChren?"
@@ -25,10 +25,10 @@ MonoBehaviour:
     - dialogueChoice: Ja
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: e58141a1b88052848b73fd49a05cce17, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: Nein
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

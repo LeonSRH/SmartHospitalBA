@@ -30,7 +30,11 @@ namespace SH.DialogueSystem
 
         [SerializeField] bool isEventActive = false;
 
-        [HideInInspector] public GameObject buttonReference; 
+        [HideInInspector] public GameObject buttonReference;
+
+        [SerializeField] float buttonInstaniateDelay = 2;
+
+        bool startButtonDelay = false;
 
         bool optionSelected = false;
 
@@ -49,14 +53,6 @@ namespace SH.DialogueSystem
         {
             //Left commented for now cause of specific dialogue object tests, add later back
             //dialogueObject = GetRandomItem(dialogueObjects);
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartDialogue();
-            }
         }
         //bool for Behavior Tree, so that if the dialogue ends, the patient leaves
         public void StartDialogue()
@@ -96,6 +92,11 @@ namespace SH.DialogueSystem
         {
 
         }
+
+        public void InstaniateButtons()
+        {
+
+        }
         IEnumerator DisplayDialogue(DialogueObject _dialogueObject)
         {
             yield return 0;
@@ -110,11 +111,13 @@ namespace SH.DialogueSystem
                     yield return new WaitForSeconds(dialogue.dialogueDisplayTime);
                 }else
                 {
+                        startButtonDelay = true;
                         cocoStopwatch.SetActive(true);
                         stopWatch.StartStopWatch();
                         dialogueOptionsContainer.SetActive(true);   
                         foreach(var option in dialogue.dialogueChoices)
                         {
+                            yield return new WaitForSeconds(0.2f);
                             buttonReference = Instantiate(option.Button, dialogueOptionsParent);
                             buttonReference.GetComponent<DialogueOption>().Setup(this, option.followOnDialogue, option.dialogueChoice);
                             spawnsButtons.Add(buttonReference);
@@ -133,6 +136,7 @@ namespace SH.DialogueSystem
             cocoStopwatch.SetActive(false);
             //Currently restarts the Stopwatch if button is pressed, two options: First, save the times in a file or smth, second
             //Last Button stops the Watch 
+            startButtonDelay = false;
             stopWatch.StopStopWatch();
             dialogueCanvas.enabled = false;
             optionSelected = false;

@@ -19,22 +19,22 @@ MonoBehaviour:
     - dialogueChoice: 'Reanimation '
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: 'Atemwegssicherung '
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: 'Immobilisation '
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: 'Sauerstofftherapie '
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: ac09545f59c5349408312213a7a4edf3, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: "Kreislaufunterst\xFCtzung "
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8be3783eb43cb44187bc85a61489857, type: 3}
+  m_Name: Nein_FR1
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - dialogueText: Nein
+    dialogueDisplayTime: 2
+    dialogueChoices: []
+    buttons: []
+  - dialogueText: Fragerunde 2
+    dialogueDisplayTime: 1
+    dialogueChoices:
+    - dialogueChoice: Fortsetzen
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 139a94264e6c4e24c9b25781f859a840, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+    buttons: []
+  endDialogue: {fileID: 0}

@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSegments:
   - dialogueText: "Gro\xDFvater an Myokardinfarkt verstorben. Mutter arterielle Hypertonie"
-    dialogueDisplayTime: 2
+    dialogueDisplayTime: 1
     dialogueChoices: []
     buttons: []
-  endDialogue: {fileID: 11400000, guid: 038ae0d8c15f0c443a87052446e3e6b7, type: 2}
+  - dialogueText: Fragerunde 3
+    dialogueDisplayTime: 1
+    dialogueChoices:
+    - dialogueChoice: Fortsetzen
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 038ae0d8c15f0c443a87052446e3e6b7, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+    buttons: []
+  endDialogue: {fileID: 0}

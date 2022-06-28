@@ -1046,6 +1046,7 @@
 "Assets/Tools/Behavior Designer/Runtime/Variables/SharedVector3Int.cs"
 "Assets/Tools/Behavior Designer/Runtime/Variables/SharedVector4.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
+"Assets/_Scenes/11012957Scene/Scripts/AnswerHandler.cs"
 "Assets/_Scenes/11012957Scene/Scripts/CocoStopwatch.cs"
 "Assets/_Scenes/11012957Scene/Scripts/DialogueInteract.cs"
 "Assets/_Scenes/11012957Scene/Scripts/DialogueInterface.cs"

@@ -19,21 +19,21 @@ MonoBehaviour:
     - dialogueChoice: "Sind die heutigen Schmerzen pl\xF6tzlich aufgetreten? Wobei?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 4ced079cf7b80254b86d225d8c2ccd96, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: "Sind in der Vergangenheit bereits Frakturen ohne ad\xE4quates
         Trauma aufgetreten?"
       dialogueReaction: 0
-      followOnDialogue: {fileID: 11400000, guid: 39447ae37a46f00489bd88b5e559c2ff, type: 2}
-      Button: {fileID: 0}
+      followOnDialogue: {fileID: 11400000, guid: 72dee4634879f1048ac11a892cc72912, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: "Haben Sie in den letzten Tagen eine Flugreise oder l\xE4ngere
         Autofahrt unternommen?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: a57cfb00abda437439166d38b59bfdb5, type: 2}
-      Button: {fileID: 0}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     - dialogueChoice: "Gibt es im Familien-/Bekanntenkreis aktuell Personen mit \xE4hnlichen
         Symptomen?"
       dialogueReaction: 0
-      followOnDialogue: {fileID: 11400000, guid: 39447ae37a46f00489bd88b5e559c2ff, type: 2}
-      Button: {fileID: 0}
+      followOnDialogue: {fileID: 11400000, guid: 72dee4634879f1048ac11a892cc72912, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
     buttons: []
   endDialogue: {fileID: 0}
