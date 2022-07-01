@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSegments:
   - dialogueText: "Ja relativ pl\xF6tzlich kurz nach dem Aufstehen."
-    dialogueDisplayTime: 1
+    dialogueDisplayTime: 2
     dialogueChoices: []
     buttons: []
   - dialogueText: Laborparameter erheben
-    dialogueDisplayTime: 1
+    dialogueDisplayTime: 3
     dialogueChoices:
     - dialogueChoice: Fortsetzen
       dialogueReaction: 0
-      followOnDialogue: {fileID: 11400000, guid: 7bc8c25b585819a4f9301600581254ed, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      followOnDialogue: {fileID: 11400000, guid: 40ff0436e01b9034380ae36ebefba685, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 9362ba51a28e8e54bb89697207df3e60, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

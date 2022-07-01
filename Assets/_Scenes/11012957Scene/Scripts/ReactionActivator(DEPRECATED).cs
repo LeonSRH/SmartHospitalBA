@@ -8,9 +8,6 @@ namespace SH.DialogueSystem
 
     public class ReactionActivator : MonoBehaviour
     {
-        void start()
-        {
-        }
 
         public void CheckeveryString(DialogueObject dialogueObject)
         {

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8be3783eb43cb44187bc85a61489857, type: 3}
+  m_Name: "Therapeutische Ma\xDFnahmen"
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - dialogueText: "Welche therapeutische Ma\xDFnahme m\xF6chten Sie weiter durchf\xFChren? "
+    dialogueDisplayTime: 3
+    dialogueChoices:
+    - dialogueChoice: 'Keine Therapie notwendig '
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: caba72327a45c6745a289b653aa94424, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
+    - dialogueChoice: Operation
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: caba72327a45c6745a289b653aa94424, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
+    - dialogueChoice: 'Anlage Thoraxdrainage '
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: caba72327a45c6745a289b653aa94424, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
+    - dialogueChoice: 'Antibiotische Therapie '
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: caba72327a45c6745a289b653aa94424, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
+    - dialogueChoice: Keines der aufgelisteten
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 7238328de380c064a865bdd42543c05a, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 08ae86fcf8335cb4c887427333fe6d44, type: 3}
+    buttons: []
+  endDialogue: {fileID: 0}

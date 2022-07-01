@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 namespace SH.DialogueSystem
 {
     public class DialogueInteract : MonoBehaviour
     {
-        [SerializeField] DialogueObject dialogueObject;
+        [SerializeField] public DialogueObject startdialogueObject;
+
+        [SerializeField] public GameObject dialogueWindow;
+
+        [SerializeField] AnswerHandler answerHandler;
 
         [SerializeField] public UserDataDecision userDataDecision;
 
@@ -16,11 +21,9 @@ namespace SH.DialogueSystem
 
         [SerializeField] GameObject cocoStopwatch;
 
-        [SerializeField] Canvas dialogueCanvas;
+        [SerializeField] public Canvas dialogueCanvas;
 
-        [SerializeField] CocoStopwatch stopWatch;
-        //Testings
-        [SerializeField] List<DialogueObject> dialogueObjects = new List<DialogueObject>();
+        [SerializeField] public CocoStopwatch stopWatch;
 
         [SerializeField] TMPro.TMP_Text dialogueText;
 
@@ -28,15 +31,17 @@ namespace SH.DialogueSystem
 
         [SerializeField] GameObject dialogueOptionsButtonPrefab, dialogueOptionsContainer;
 
-        [SerializeField] bool isEventActive = false;
+        [SerializeField] public bool isEventActive = false;
 
         [HideInInspector] public GameObject buttonReference;
 
         [SerializeField] float buttonInstaniateDelay = 2;
 
+        private List<GameObject> spawnsButtons = new List<GameObject>();
+
         bool startButtonDelay = false;
 
-        bool optionSelected = false;
+        [SerializeField] bool optionSelected = false;
 
         public bool isDialogue = false;
 
@@ -54,28 +59,34 @@ namespace SH.DialogueSystem
             //Left commented for now cause of specific dialogue object tests, add later back
             //dialogueObject = GetRandomItem(dialogueObjects);
         }
-        //bool for Behavior Tree, so that if the dialogue ends, the patient leaves
+
         public void StartDialogue()
         {
-            StartCoroutine(DisplayDialogue(dialogueObject));
+            if (gameObject.tag == "CurrentPatient")
+            {
+                StartCoroutine(DisplayDialogue(startdialogueObject));
+            }
         }
-        public void StartDialogue(DialogueObject _dialogueObject, ReactionBool _reactionBool)
+        public void StartDialogue(DialogueObject _dialogueObject)
         {
             StartCoroutine(DisplayDialogue(_dialogueObject));
         }
+  
         public void OptionSelected(DialogueObject selectedOption)
         {
             optionSelected = true;
-            dialogueObject = selectedOption;
+            StartDialogue(selectedOption);
             //isEventActive = true;
             //So far it works, needs more testings
+            /*
             if (!isEventActive)
             {
                 StartDialogue();
-            }
-            
+            }*/
+
             //Probalby seperate method that gets called (Savestuff)s
             userDataDecision.userData.Add(stopWatch.currentTime);
+
             foreach(var dialogue in selectedOption.dialogueSegments)
             {
 
@@ -88,21 +99,51 @@ namespace SH.DialogueSystem
         {
             dialogueReactions.GoToBed();
         }
+
+        public void TriggerEvent()
+        {
+            dialogueWindow.SetActive(false);
+            isEventActive = true;
+        }
+        public void CorrectAnswerHandlerRedirect()
+        {
+            answerHandler.ShowCorrectAnswer();
+        }
+        public void InCorrectAnswerHandlerRedirect()
+        {
+            answerHandler.ShowIncorrectAnswer();
+            
+        }
+        public void ActivateDiagnoseEventRedirect()
+        {
+            answerHandler.ShowDiagnoseWindow();
+            TriggerEvent();
+        }
+
+        public void ActivateSecondDiagnoseEventRedirect()
+        {
+            answerHandler.ShowSecondDiagnoseWindow();
+            TriggerEvent();
+        }
+
         public void AssistantTaskRedirect()
         {
 
         }
-
-        public void InstaniateButtons()
+        //Dont use, just for testings
+        public void ActivateLaborParameterWindowRedirect()
         {
-
+            answerHandler.ShowLaborParameterWindow();
+            TriggerEvent();
         }
         IEnumerator DisplayDialogue(DialogueObject _dialogueObject)
         {
             yield return 0;
-            List<GameObject> spawnsButtons = new List<GameObject>();
-
-            dialogueCanvas.enabled = true;
+            
+            if (!isEventActive)
+            {
+                dialogueCanvas.enabled = true;
+            }
             foreach(var dialogue in _dialogueObject.dialogueSegments)
             {
                 dialogueText.text = dialogue.dialogueText;
@@ -129,7 +170,7 @@ namespace SH.DialogueSystem
                     }
                     break;
                 }
-            yield return new WaitForSeconds(dialogue.dialogueDisplayTime);
+                yield return new WaitForSeconds(dialogue.dialogueDisplayTime);
                 //Has later to be replaced with Option when the Player wants to continue 
             }
             dialogueOptionsContainer.SetActive(false);

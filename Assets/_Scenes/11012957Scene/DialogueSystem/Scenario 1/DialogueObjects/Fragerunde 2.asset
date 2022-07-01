@@ -20,7 +20,7 @@ MonoBehaviour:
         eingenommen? "
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: f75ed50acf5e09a48a4f6b04e60954cd, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
     - dialogueChoice: "Versp\xFCren Sie Luftnot?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 091b05d12973e9c4c9c91f891c2ecc0d, type: 2}
@@ -33,6 +33,6 @@ MonoBehaviour:
         Erkrankungen?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 77d41e62f1d03064e859c00173b34309, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

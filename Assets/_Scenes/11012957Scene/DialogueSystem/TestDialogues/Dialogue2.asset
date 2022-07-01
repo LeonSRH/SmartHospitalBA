@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: Dialogue2
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: Guten Tag Doktor.
+  - dialogueText: Hallo Doktor
     dialogueDisplayTime: 2
     dialogueChoices: []
     buttons: []
-  - dialogueText: Ich habe schmerzen.
-    dialogueDisplayTime: 2
-    dialogueChoices: []
+  - dialogueText: akdaskd
+    dialogueDisplayTime: 1
+    dialogueChoices:
+    - dialogueChoice: "Diagnose Window \xF6ffnen"
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 40ff0436e01b9034380ae36ebefba685, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 08ae86fcf8335cb4c887427333fe6d44, type: 3}
+    - dialogueChoice: "Diagnose Window \xF6ffnen"
+      dialogueReaction: 0
+      followOnDialogue: {fileID: 11400000, guid: 081d16d936b01014986f7a52dab9d3d5, type: 2}
+      Button: {fileID: 9181237316533860645, guid: 08ae86fcf8335cb4c887427333fe6d44, type: 3}
     buttons: []
-  endDialogue: {fileID: 11400000, guid: cac938772c757bc4bac629c737a081b4, type: 2}
+  endDialogue: {fileID: 0}

@@ -23,6 +23,6 @@ MonoBehaviour:
     - dialogueChoice: Fortsetzen
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 139a94264e6c4e24c9b25781f859a840, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 08ae86fcf8335cb4c887427333fe6d44, type: 3}
     buttons: []
-  endDialogue: {fileID: 11400000, guid: 139a94264e6c4e24c9b25781f859a840, type: 2}
+  endDialogue: {fileID: 0}

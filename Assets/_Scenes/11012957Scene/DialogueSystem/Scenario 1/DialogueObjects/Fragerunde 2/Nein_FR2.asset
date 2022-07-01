@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSegments:
   - dialogueText: Nein.
-    dialogueDisplayTime: 1
+    dialogueDisplayTime: 2
     dialogueChoices: []
     buttons: []
   - dialogueText: Fragerunde 3
-    dialogueDisplayTime: 0
+    dialogueDisplayTime: 3
     dialogueChoices:
     - dialogueChoice: Fortsetzen.
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 038ae0d8c15f0c443a87052446e3e6b7, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 08ae86fcf8335cb4c887427333fe6d44, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

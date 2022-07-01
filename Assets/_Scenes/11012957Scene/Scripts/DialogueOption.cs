@@ -39,6 +39,25 @@ namespace SH.DialogueSystem
         {
             dialogueInteract.GoToBedRedirect();
         }
- 
+        public void CorrectAnswer()
+        {
+            dialogueInteract.CorrectAnswerHandlerRedirect();
+        }
+        public void IncorrectAnswer()
+        {
+            dialogueInteract.InCorrectAnswerHandlerRedirect();
+        }
+        public void ActivateLaborParameterWindow()
+        {
+            dialogueInteract.ActivateLaborParameterWindowRedirect();
+        }
+        public void ActivateDiagnoseParameterWindow()
+        {
+            dialogueInteract.ActivateDiagnoseEventRedirect();
+        }
+        public void ActivateSecondDiagnoseParameterWindow()
+        {
+            dialogueInteract.ActivateSecondDiagnoseEventRedirect();
+        }
     }
 }

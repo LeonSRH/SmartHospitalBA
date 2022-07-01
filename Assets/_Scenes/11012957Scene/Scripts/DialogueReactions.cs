@@ -49,7 +49,6 @@ namespace SH.DialogueSystem
             lookPos.y = 0;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 5 * Time.deltaTime);
-
         }
 
         public void Start()

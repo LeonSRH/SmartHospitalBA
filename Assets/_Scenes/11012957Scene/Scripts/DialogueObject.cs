@@ -30,7 +30,6 @@ namespace SH.DialogueSystem
     public struct DialogueChoice
     {
         [SerializeField] public string dialogueChoice;
-        [SerializeField] public int dialogueReaction; // optional
         [SerializeField] public DialogueObject followOnDialogue;
         [SerializeField] public GameObject Button;
     }

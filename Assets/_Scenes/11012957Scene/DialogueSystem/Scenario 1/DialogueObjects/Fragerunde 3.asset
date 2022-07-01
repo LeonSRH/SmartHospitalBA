@@ -24,7 +24,7 @@ MonoBehaviour:
         Trauma aufgetreten?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 72dee4634879f1048ac11a892cc72912, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
     - dialogueChoice: "Haben Sie in den letzten Tagen eine Flugreise oder l\xE4ngere
         Autofahrt unternommen?"
       dialogueReaction: 0
@@ -34,6 +34,6 @@ MonoBehaviour:
         Symptomen?"
       dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 72dee4634879f1048ac11a892cc72912, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

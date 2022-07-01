@@ -9,30 +9,35 @@ namespace SH.DialogueSystem
     {
         [SerializeField] Canvas canvas;
         [SerializeField] UnityEvent OnInteract;
+        [SerializeField] UnityEvent OnEnterInteractable;
 
         void Awake()
         {
             canvas.enabled = false;
         }
-
         void OnEnable()
         {
             NPCController.OnInteract += Interact;
+            NPCController.OnEnterInteractable += ResetInteract;
             NPCController.OnEnterInteractable += ShowUI;
             NPCController.OnExitInteractable += HideUI;
         }
-
         void OnDisable()
         {
             NPCController.OnInteract -= Interact;
             NPCController.OnEnterInteractable -= ShowUI;
+            NPCController.OnEnterInteractable -= ResetInteract;
             NPCController.OnExitInteractable -= HideUI;
         }
-
         public void Interact()
         {
             Debug.Log("Interacting");
             OnInteract.Invoke();
+        }
+
+        public void ResetInteract()
+        {
+            OnEnterInteractable.Invoke();
         }
 
         void ShowUI()

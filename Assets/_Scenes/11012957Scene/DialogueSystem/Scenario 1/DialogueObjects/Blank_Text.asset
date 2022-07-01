@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Blank_Text
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: ...
-    dialogueDisplayTime: 2
+  - dialogueText: TO BE CONTINUED
+    dialogueDisplayTime: 1
     dialogueChoices: []
     buttons: []
   endDialogue: {fileID: 0}
