@@ -17,7 +17,6 @@ MonoBehaviour:
     dialogueDisplayTime: 2
     dialogueChoices:
     - dialogueChoice: "Fortf\xFChren"
-      dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 081d16d936b01014986f7a52dab9d3d5, type: 2}
       Button: {fileID: 9181237316533860645, guid: 49a42d6f156beaf4c8c8dade3b70846d, type: 3}
     buttons: []

@@ -6,16 +6,9 @@ namespace SH.DialogueSystem
     public class AnswerHandler : MonoBehaviour
     {
 
-        [SerializeField] GameObject answerCorrect;
+        [SerializeField] GameObject answerCorrect, answerIncorrect, laborParameterObject, diagnoseWindowSC1, secondDiagnoseWindowSC1;
 
-        [SerializeField] GameObject answerIncorrect;
-
-        [SerializeField] GameObject laborParameterObject;
-
-        [SerializeField] GameObject DiagnoseWindowSC1;
-
-        [SerializeField] GameObject SecondDiagnoseWindowSC1;
-
+        [SerializeField] GameObject scenarioEndTrigger;
 
         //[SerializeField] GameObject answerIncorrect;
 
@@ -31,7 +24,6 @@ namespace SH.DialogueSystem
                 yield return new WaitForSeconds(0.05f);
             }
         }*/
-
         IEnumerator AnswerCorrect()
         {
             answerCorrect.SetActive(true);
@@ -59,13 +51,15 @@ namespace SH.DialogueSystem
         }
         public void ShowDiagnoseWindow()
         {
-                DiagnoseWindowSC1.SetActive(true);
+                diagnoseWindowSC1.SetActive(true);
         }
         public void ShowSecondDiagnoseWindow()
         {
-            SecondDiagnoseWindowSC1.SetActive(true);
+            secondDiagnoseWindowSC1.SetActive(true);
         }
-
-
+        public void ActivateEndTrigger()
+        {
+            scenarioEndTrigger.SetActive(true);    
+        }
     }
 }

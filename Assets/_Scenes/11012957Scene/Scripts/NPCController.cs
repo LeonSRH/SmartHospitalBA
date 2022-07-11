@@ -18,6 +18,7 @@ namespace SH.DialogueSystem
             if (other.tag == "DialogueTrigger")     
             {
                 if (OnInteract != null) OnInteract();
+                other.transform.parent.gameObject.SetActive(false);
                 //if (OnEnterInteractable != null) OnEnterInteractable();
             }
             if (other.tag == "Finish")

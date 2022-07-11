@@ -22,8 +22,10 @@ MonoBehaviour:
     dialogueDisplayTime: 3
     dialogueChoices:
     - dialogueChoice: Fortsetzen
-      dialogueReaction: 0
       followOnDialogue: {fileID: 11400000, guid: 40ff0436e01b9034380ae36ebefba685, type: 2}
       Button: {fileID: 9181237316533860645, guid: 9362ba51a28e8e54bb89697207df3e60, type: 3}
+    - dialogueChoice: Behandlung abbrechen
+      followOnDialogue: {fileID: 11400000, guid: c1f9010c7a70e0c4381033e56553e48a, type: 2}
+      Button: {fileID: 9181237316533860645, guid: e3fa3de5c90c98e44b5e23f7927d0429, type: 3}
     buttons: []
   endDialogue: {fileID: 0}

@@ -20,9 +20,10 @@ namespace SH.DialogueSystem
         //Get the Dialogueobject of the currentpatient so that it can be randomized inbetween the patients
         [SerializeField]  private DialogueInteract dialogueInteract;
 
-        [SerializeField] GameObject ownObject;
+        [SerializeField] GameObject currentPatient, dialogueTrigger, ownObject;
 
-        [SerializeField] GameObject currentPatient;
+        [SerializeField] List<GameObject> dialogueTriggerPositions, patientInformations = new List<GameObject>();
+
         //Function for later, startDialogue cant be on dialoguewindow, because it will start the dialog for every npc
         /*
         public void OnTriggerEnter(Collider other)
@@ -30,12 +31,6 @@ namespace SH.DialogueSystem
             if (gameObject.activeSelf)
             Debug.Log("Trigger is now active");
         }*/
-
-        private void Start()
-        {
-            Debug.Log(Application.persistentDataPath);
-        }
-
         public void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player")
@@ -64,6 +59,7 @@ namespace SH.DialogueSystem
             yield return new WaitForSeconds(Random.Range(5.0f, 10.0f));
             //Select Patient
             currentPatient.SetActive(true);
+            ActivateDialogueTrigger();
             currentPatient.tag = "CurrentPatient";
             isScenarioActive = false;
             ownText.text = "Starte Szenario";
@@ -75,16 +71,24 @@ namespace SH.DialogueSystem
             currentPatient = GetRandomItem(patients);
             ownText.text = "Szenario gestartet";
             dialogueInteract = currentPatient.GetComponent<DialogueInteract>();
+        }
+        public void ActivateDialogueTrigger()
+        {
             if (dialogueInteract.startdialogueObject.name == "Eroeffnungstext")
             {
-                Debug.Log("Scenario 1");
-                //Activate Scenario Trigger 1
+               dialogueTrigger.SetActive(true);
+               dialogueTrigger.transform.position = dialogueTriggerPositions[0].transform.position;
+               patientInformations[0].SetActive(true);
+               patientInformations[1].SetActive(true);
+
             }
             //Replace Blank Text with other Scenario, testings
-            if (dialogueInteract.startdialogueObject.name == "Blank_Text")
+            if (dialogueInteract.startdialogueObject.name == "Eroeffnungstext_S2")
             {
-                Debug.Log("Scenario 2");
-                //Activate Scenario Trigger 2
+                dialogueTrigger.SetActive(true);
+                dialogueTrigger.transform.position = dialogueTriggerPositions[1].transform.position;
+                patientInformations[0].SetActive(true);
+                patientInformations[2].SetActive(true);
             }
         }
     }

@@ -50,6 +50,11 @@ namespace SH.DialogueSystem
             SliderGreen();
 
         }
+        public void SelectCTThoraxKM()
+        {
+            //diagnoseGif[2].SetActive(true);
+            SliderGreen();
+        }
         private void SliderGreen()
         {
             sliderColor.color = Color.green;

@@ -27,7 +27,7 @@ MonoBehaviour:
       Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}
     - dialogueChoice: 'Sauerstofftherapie '
       followOnDialogue: {fileID: 11400000, guid: ac09545f59c5349408312213a7a4edf3, type: 2}
-      Button: {fileID: 9181237316533860645, guid: 9c23825ee9c6c31439c2642d6967d708, type: 3}
+      Button: {fileID: 9181237316533860645, guid: 51183da7ca9a8fa439df23212804f563, type: 3}
     - dialogueChoice: "Kreislaufunterst\xFCtzung "
       followOnDialogue: {fileID: 11400000, guid: ac09545f59c5349408312213a7a4edf3, type: 2}
       Button: {fileID: 9181237316533860645, guid: 073b2c2e9f7c071479f504000da9e83f, type: 3}

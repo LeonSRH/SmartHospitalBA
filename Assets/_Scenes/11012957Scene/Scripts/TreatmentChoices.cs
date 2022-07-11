@@ -5,72 +5,82 @@ using UnityEngine.UI;
 using TMPro;
 namespace SH.DialogueSystem
 {
-public class TreatmentChoices : MonoBehaviour
-{
-    [SerializeField] TMPro.TMP_Text textMeshPro;
-
-    [SerializeField] GameObject window;
-
-    [SerializeField] GameObject ownWindow;
-
-    [SerializeField] DialogueInteract dialogueInteract;
-
-    [SerializeField] string DiagnoseText;
-
-    [SerializeField] TreatmentEvent treatmentEvent;
-
-        //switch case
-
-    public enum TreatmentEventProperties { EKG, Thorax, Wrong};
-    public TreatmentEventProperties treatmentEventProperties;
-
-    public void TreatmentProperty()
+    public class TreatmentChoices : MonoBehaviour
     {
-        window.SetActive(true);
-        textMeshPro.text = DiagnoseText + " wird durchgefuehrt";
-        //dialogueInteract = FindObjectOfType<DialogueInteract>();
-        ownWindow.SetActive(false);
-    }
+        [SerializeField] TMPro.TMP_Text textMeshPro;
 
-    public void TreatmentChoice()
-    {
-            switch(treatmentEventProperties)
-            {
-                case TreatmentEventProperties.EKG:
+        [SerializeField] GameObject window;
 
-                    EKG();
+        [SerializeField] GameObject ownWindow;
 
-                    break;
-                case TreatmentEventProperties.Thorax:
+        [SerializeField] DialogueInteract dialogueInteract;
 
-                    Thorax();
+        [SerializeField] string DiagnoseText;
 
-                    break;
-                case TreatmentEventProperties.Wrong:
+        [SerializeField] TreatmentEvent treatmentEvent;
 
-                    WrongChoice();
+            //switch case
 
-                    break;
-            }
-    }
-    public void EKG()
-    {
-            TreatmentProperty();
-            treatmentEvent.SelectEKGDiagnose();
-            treatmentEvent.StartProgressBar();
+        public enum TreatmentEventProperties { EKG, Thorax,CTThoraxKM, Wrong};
+        public TreatmentEventProperties treatmentEventProperties;
+
+        public void TreatmentProperty()
+        {
+            window.SetActive(true);
+            textMeshPro.text = DiagnoseText + " wird durchgefuehrt";
+            //dialogueInteract = FindObjectOfType<DialogueInteract>();
+            ownWindow.SetActive(false);
         }
-    public void Thorax()
-    {
-            TreatmentProperty();
-            treatmentEvent.StartProgressBar();
-            treatmentEvent.SelectThoraxDiagnose();
-    }
 
-    public void WrongChoice()
-    {
+        public void TreatmentChoice()
+        {
+                switch(treatmentEventProperties)
+                {
+                    case TreatmentEventProperties.EKG:
+
+                        EKG();
+
+                        break;
+                    case TreatmentEventProperties.Thorax:
+
+                        Thorax();
+
+                        break;
+                    case TreatmentEventProperties.CTThoraxKM:
+
+                        CTThoraxKM();
+
+                        break;
+                    case TreatmentEventProperties.Wrong:
+
+                        WrongChoice();
+
+                        break;
+                }
+        }
+        public void EKG()
+        {
+                TreatmentProperty();
+                treatmentEvent.SelectEKGDiagnose();
+                treatmentEvent.StartProgressBar();
+            }
+        public void Thorax()
+        {
+                TreatmentProperty();
+                treatmentEvent.StartProgressBar();
+                treatmentEvent.SelectThoraxDiagnose();
+        }
+        public void CTThoraxKM()
+        {
             TreatmentProperty();
-            treatmentEvent.SelectWrongDiagnose();
             treatmentEvent.StartProgressBar();
+            treatmentEvent.SelectCTThoraxKM();
+        }
+        public void WrongChoice()
+        {
+                TreatmentProperty();
+                treatmentEvent.SelectWrongDiagnose();
+                treatmentEvent.StartProgressBar();
+        }
     }
-}
 }

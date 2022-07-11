@@ -15,6 +15,12 @@ namespace SH.DialogueSystem
 
         [SerializeField] AnswerHandler answerHandler;
 
+        [SerializeField] public AudioSource audioSource;
+
+        [SerializeField] public AudioClip buttonPress;
+
+        [SerializeField] GameObject sauerStoffMaske;
+
         [SerializeField] public UserDataDecision userDataDecision;
 
         [SerializeField] DialogueReactions dialogueReactions;
@@ -35,9 +41,9 @@ namespace SH.DialogueSystem
 
         [HideInInspector] public GameObject buttonReference;
 
-        [SerializeField] float buttonInstaniateDelay = 2;
-
         private List<GameObject> spawnsButtons = new List<GameObject>();
+
+        [SerializeField] private List<DialogueObject> dialogueObjects = new List<DialogueObject>();
 
         bool startButtonDelay = false;
 
@@ -46,18 +52,16 @@ namespace SH.DialogueSystem
         public bool isDialogue = false;
 
         //Function to randomize the dialogue objects at start --> random Disease patterns
-        //Left commented for now cause of specific dialogue object tests, add later back
-        /*
         public DialogueObject GetRandomItem(List<DialogueObject>listToRandomize)
         {
             int currentDialogueObject = Random.Range(0, listToRandomize.Count);
             DialogueObject randomObj = listToRandomize[currentDialogueObject];
             return randomObj;
-        }*/
-        public void Start()
+        }
+        public void OnEnable()
         {
             //Left commented for now cause of specific dialogue object tests, add later back
-            //dialogueObject = GetRandomItem(dialogueObjects);
+            startdialogueObject = GetRandomItem(dialogueObjects);
         }
 
         public void StartDialogue()
@@ -76,14 +80,9 @@ namespace SH.DialogueSystem
         {
             optionSelected = true;
             StartDialogue(selectedOption);
+            //make own Event for Audiosources
+            audioSource.PlayOneShot(buttonPress);
             //isEventActive = true;
-            //So far it works, needs more testings
-            /*
-            if (!isEventActive)
-            {
-                StartDialogue();
-            }*/
-
             //Probalby seperate method that gets called (Savestuff)s
             userDataDecision.userData.Add(stopWatch.currentTime);
 
@@ -98,6 +97,10 @@ namespace SH.DialogueSystem
         public void GoToBedRedirect()
         {
             dialogueReactions.GoToBed();
+        }
+        public void EndScenarioRedirect()
+        {
+            answerHandler.ActivateEndTrigger();
         }
 
         public void TriggerEvent()
@@ -136,6 +139,10 @@ namespace SH.DialogueSystem
             answerHandler.ShowLaborParameterWindow();
             TriggerEvent();
         }
+        public void ActivateSauersstoffMaske()
+        {
+            sauerStoffMaske.SetActive(true);
+        }
         IEnumerator DisplayDialogue(DialogueObject _dialogueObject)
         {
             yield return 0;
@@ -156,9 +163,10 @@ namespace SH.DialogueSystem
                         cocoStopwatch.SetActive(true);
                         stopWatch.StartStopWatch();
                         dialogueOptionsContainer.SetActive(true);   
+                        //Yield Return so that the buttons dont spawn multiple times if the question gets answererd to fast
+                        yield return new WaitForSeconds(0.3f);
                         foreach(var option in dialogue.dialogueChoices)
                         {
-                            yield return new WaitForSeconds(0.2f);
                             buttonReference = Instantiate(option.Button, dialogueOptionsParent);
                             buttonReference.GetComponent<DialogueOption>().Setup(this, option.followOnDialogue, option.dialogueChoice);
                             spawnsButtons.Add(buttonReference);

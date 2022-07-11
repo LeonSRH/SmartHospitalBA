@@ -3,13 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class ParameterEvent : MonoBehaviour
-{
-    public void ParmeterDone()
-    {
-       var currentbutton = GetComponent<Button>().colors;
-        currentbutton.normalColor = Color.green;
-        GetComponent<Button>().colors = currentbutton;
-    }
 
+namespace SH.DialogueSystem
+{
+    public class ParameterEvent : MonoBehaviour
+    {
+        [SerializeField] private LaborPages laborPages;
+
+         private List<Button> buttonList;
+
+        private void Awake()
+        {
+           buttonList = laborPages.buttonList;
+        }
+        public void ParmeterDone()
+        {
+           var currentbuttoncolor = GetComponent<Button>().colors;
+           var currentbutton = GetComponent<Button>();
+           currentbuttoncolor.normalColor = Color.green;
+           GetComponent<Button>().colors = currentbuttoncolor;
+           if (!buttonList.Contains (currentbutton))
+           {
+                buttonList.Add(currentbutton);
+           }
+        }
+    }
 }

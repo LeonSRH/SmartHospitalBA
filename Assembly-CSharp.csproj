@@ -320,6 +320,7 @@
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\AudioSource\SetVelocityUpdateMode.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Animator\GetDeltaRotation.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Rigidbody\SetIsKinematic.cs" />
+    <Compile Include="Assets\SimpleDeactivate.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\SharedVariables\SetSharedGameObject.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Transform\SetForwardVector.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Animator\StartRecording.cs" />
@@ -639,6 +640,7 @@
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\AudioSource\GetMaxDistance.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\SharedVariables\SetSharedFloat.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\Light\GetIntensity.cs" />
+    <Compile Include="Assets\RestartScenario.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Decorators\ConditionalEvaluator.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\SharedVariables\CompareSharedGameObject.cs" />
     <Compile Include="Assets\Tools\Behavior Designer\Runtime\Tasks\Unity\ParticleSystem\Clear.cs" />
@@ -940,6 +942,12 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>D:\UnityEd\2021.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>D:\UnityEd\2021.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\UnityEd\2021.3.1f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>

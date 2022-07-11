@@ -30,6 +30,7 @@ namespace SH.DialogueSystem
         {
             dialogueReactions = _dialogueReactions;
         }
+
         //Following functions for event firing 
         public void SelectOption()
         {
@@ -42,6 +43,10 @@ namespace SH.DialogueSystem
         public void CorrectAnswer()
         {
             dialogueInteract.CorrectAnswerHandlerRedirect();
+        }
+        public void SauerstoffTherapieRedirect()
+        {
+            dialogueInteract.ActivateSauersstoffMaske();
         }
         public void IncorrectAnswer()
         {
@@ -58,6 +63,14 @@ namespace SH.DialogueSystem
         public void ActivateSecondDiagnoseParameterWindow()
         {
             dialogueInteract.ActivateSecondDiagnoseEventRedirect();
+        }
+        public void ActivateST()
+        {
+            dialogueInteract.ActivateSauersstoffMaske();
+        }
+        public void EndScenario()
+        {
+            dialogueInteract.EndScenarioRedirect();
         }
     }
 }
